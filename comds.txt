@@ -1,0 +1,42 @@
+139.180.141.171
+5#tR2N%%9+uq_(XJ
+
+pwd is an abbreviation of ‘print working directory’
+
+mkdir /tmp/tutorial
+cd /tmp/tutorial
+rm folder_* remove
+mv move
+rmdir folder_*
+mv combined.txt test_* dir3 dir2
+
+cp combined.txt backup_combined.txt copy
+
+   Domain: syamjithas.com
+   Type:   dns
+   Detail: No valid IP addresses found for syamjithas.com
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+
+
+sudo npm i pm2 -g
+pm2 start app (or whatever your file name)
+
+# Other pm2 commands
+pm2 show app
+pm2 status
+pm2 restart app
+pm2 stop app
+pm2 logs (Show log stream)
+pm2 flush (Clear logs)
+
+# To make sure app starts when reboot
+pm2 startup ubuntu
+
+sudo certbot certonly --standalone
+sudo certbot --nginx -d syamjithas.com
+
+pm2 start peerjs --port 3001 --key peerjs --path /mypeer --proxied true
