@@ -40,3 +40,11 @@ sudo certbot certonly --standalone
 sudo certbot --nginx -d syamjithas.com
 
 pm2 start peerjs --port 3001 --key peerjs --path /mypeer --proxied true
+
+npx create-react-app frontend
+cd frontend
+npm start
+
+npm install --global serve
+
+serve -s build -l 3003
