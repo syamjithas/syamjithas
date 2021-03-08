@@ -79,7 +79,7 @@ const HelloWorld = [
         { class: "mtk1", text: "    " },
         { class: "mtk10", text: "alert" },
         { class: "mtk1", text: "(" },
-        { class: "mtk8", text: "Hello World !! I am Syamjith" },
+        { class: "mtk8", text: "Hello World !" },
         { class: "mtk1", text: ");" },
     ],
     [{ class: "mtk1", text: "   }" }],
