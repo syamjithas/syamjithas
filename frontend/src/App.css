@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    widows: 100%;
+    padding: 5%;
+    margin: 0;
+    background-color:rgb(40, 44, 52);
+    overflow: hidden;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-family: monospace;
+}
