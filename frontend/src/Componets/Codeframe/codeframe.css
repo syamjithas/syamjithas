@@ -1,0 +1,15 @@
+.codeframe {
+    font-size: 15px;
+    text-align: left;
+    background-color: rgb(40, 44, 52);
+    border-radius: 10px;
+    height: 250px;
+    font-family: monospace;
+}
+
+.linenumber {
+    color: #abb2bf;
+    width: 24px;
+    display: inline-block;
+    text-align: right;
+}

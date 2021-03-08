@@ -1,5 +1,5 @@
 import './App.css';
-import Landing from './page/Landing/Landing'
+import Landing from './Page/Landing/Landing'
 function App() {
   return (
     <div className='content'>

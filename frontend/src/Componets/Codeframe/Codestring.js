@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 
 const Codestring = props => {
     const [codeStr, setCodeStr] = useState("");
+    var tempStr = ""
     useEffect(() => {
         domWriter();
-    });
+    }, []);
+
 
     const delayFn = (time) => {
         return new Promise(resolve => {
@@ -16,16 +17,25 @@ const Codestring = props => {
     }
 
     const domWriter = async () => {
-        for (let i = 0; i <= props.text.length; i++) {
-            setCodeStr(props.text.substring(0, i))
-            await delayFn(50);
+        if (props.value) {
+            let text = props.value.text.split("");
+            while (text.length > 0) {
+                let char = text.shift()
+                char = char === ' ' ? '\u00A0' : char;
+                tempStr += char;
+                setCodeStr(tempStr)
+                await delayFn(50);
+            }
         }
+        props.nextString();
     }
+    const element = props.value ? <span className={props.value.class}>
+        {codeStr} </span> : <span></span>
 
     return (
-        <span className={props.class}>
-            {codeStr}
-        </span>
+        <>
+            {element}
+        </>
     )
 }
 
@@ -35,10 +45,7 @@ Codestring.defaultProps = {
     class: ''
 }
 
-Codestring.propTypes = {
-    text: Proptypes.string.isRequired,
-    class: Proptypes.string.isRequired
-}
+
 
 
 export default Codestring

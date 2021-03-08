@@ -1,13 +1,10 @@
 import './Landing.css'
-import Codeframe from './Codeframe'
-
+import Codeframe from '../../Componets/Codeframe/Codeframe'
 
 const Landing = () => {
-    const [text, setText] = useState('');
-
     return (
         <>
-            <Codeframe/>
+            <Codeframe />
         </>
     )
 }

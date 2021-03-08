@@ -1,25 +1,36 @@
 import { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import Codestring from './Codestring'
 
 const Codeline = props => {
     const [codeLine, setCodeLine] = useState([])
+    var codeLineP = props.value;
+
     useEffect(() => {
         lineWriter();
-    })
-    const lineWriter = async () => {
-        for (let i = 0; i <= props.text.length; i++) {
-            setCodeStr(props.text.substring(0, i))
-            await delayFn(50);
+    }, []);
+
+    const lineWriter = () => {
+        if (codeLineP.length > 0) {
+            setCodeLine(codeLine.concat([codeLineP.shift()]))
+        } else {
+            props.nextLine();
         }
+
     }
+    const nextString = () => {
+        lineWriter();
+    }
+
+    const lineList = codeLine.length > 0 ? codeLine.map((line, index) =>
+        <Codestring key={index} value={line} nextString={nextString} />
+    ) : <div></div>
+
     return (
         <div>
-
+            <span className="linenumber">{props.index}</span>
+            {lineList}
         </div>
-    )
-}
-
-Codeline.propTypes = {
+    );
 
 }
 
