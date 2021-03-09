@@ -1,4 +1,4 @@
-import './codeframe.css'
+import './codeframe.scss'
 import { useState, useEffect } from 'react';
 import helloWorld from '../../Data/Code'
 import Codeline from './Codeline'
