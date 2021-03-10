@@ -151,6 +151,7 @@
     .codeframe {
         font-size: 20px;
     }
+    
 }
 
 /* iPads (portrait) ----------- */
@@ -161,8 +162,12 @@
     }
     .landing-flexbox {
         display: block;
-        width: 100vw;
+        width: max-content;
         height: 50vh;
-        position: absolute;
+        position: relative;
+    }
+    .svg-logo {
+        margin-left: calc((100vw - 50vw) / 2);
+        width: 50vw;
     }
 }
