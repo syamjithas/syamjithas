@@ -1,19 +1,19 @@
 import './Landing.scss'
-import logo from '../../Resources/logo_blue_black.svg'
 import Codeframe from '../../Componets/Codeframe/Codeframe'
+import HelloWorld from '../../Componets/HelloWorld/HelloWorld'
 import { useState } from 'react'
 const Landing = () => {
-    const [landingClass, setlandingClass] = useState("")
+    const [landingClass, setlandingClass] = useState({})
     const initHelloWorld = () => {
-        setlandingClass('fade-in')
+        setlandingClass({ logo: 'fade-in', text: 'zoom-in' })
     }
     return (
         <div className='landing-container'>
             <div className='landing-flexbox'>
                 <Codeframe initHelloWorld={initHelloWorld} />
             </div>
-            <div className='landing-flexbox'>
-                <img className={`svg-logo ${landingClass}`} src={logo} />
+            <div className='landing-flexbox text-center'>
+                <HelloWorld landingClass={landingClass} />
             </div>
 
         </div>
