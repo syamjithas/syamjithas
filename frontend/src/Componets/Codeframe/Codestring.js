@@ -24,7 +24,7 @@ const Codestring = props => {
                 char = char === ' ' ? '\u00A0' : char;
                 tempStr += char;
                 setCodeStr(tempStr)
-                await delayFn(50);
+                await delayFn(10);
             }
         }
         props.nextString();

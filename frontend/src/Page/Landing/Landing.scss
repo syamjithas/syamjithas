@@ -1,0 +1,175 @@
+.mtk1 {
+    color: #abb2bf;
+}
+
+.mtk2 {
+    color: #282c34;
+}
+
+.mtk3 {
+    color: #e06c75;
+}
+
+.mtk4 {
+    color: #c678dd;
+}
+
+.mtk5 {
+    color: #d19a66;
+}
+
+.mtk6 {
+    color: #e5c07b;
+}
+
+.mtk7 {
+    color: #61afef;
+}
+
+.mtk8 {
+    color: #98c379;
+}
+
+.mtk9 {
+    color: #5c6370;
+}
+
+.mtk10 {
+    color: #56b6c2;
+}
+
+.mtk11 {
+    color: #ffffff;
+}
+
+.mtk12 {
+    color: #f44747;
+}
+
+.mtk13 {
+    color: #7f848e;
+}
+
+.mtki {
+    font-style: italic;
+}
+
+.mtkb {
+    font-weight: bold;
+}
+
+.codeframe {
+    height: 100vh;
+    display: block;
+    text-align: left;
+    font-family: monospace;
+}
+
+.linenumber {
+    color: #abb2bf;
+    width: 24px;
+    display: inline-block;
+    text-align: right;
+}
+
+.landing-container {
+    height: 100vh;
+    background-color: rgb(40, 44, 52);
+    position: relative;
+}
+
+.landing-flexbox {
+    display: inline-flex;
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    vertical-align: middle;
+}
+
+.svg-logo {
+    display: block;
+    position: relative;
+    width: 40vw;
+    margin-left: 50vw;
+    bottom: 0;
+}
+
+.fade-in {
+    animation: 1000ms ease-in 1 both running slidein;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        margin-left: 50vw;
+    }
+    100% {
+        opacity: 1;
+        margin-left: calc((50vw - 40vw) / 2);
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+    .codeframe {
+        font-size: 13px;
+    }
+    .landing-flexbox {
+        display: block;
+        width: max-content;
+        height: 50vh;
+        position: relative;
+    }
+    .svg-logo {
+        margin-left: 100vw;
+        width: 50vw;
+    }
+    @keyframes slidein {
+        from {
+            opacity: 0;
+            margin-left: 100vw;
+        }
+        to {
+            opacity: 1;
+            margin-left: calc((100vw - 50vw) / 2);
+        }
+    }
+}
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .codeframe {
+        font-size: 30px;
+    }
+}
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+    .codeframe {
+        font-size: 30px;
+    }
+}
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .codeframe {
+        font-size: 20px;
+    }
+}
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .codeframe {
+        font-size: 20px;
+    }
+    .landing-flexbox {
+        display: block;
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+    }
+}
