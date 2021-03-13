@@ -5,7 +5,7 @@
     text-align: center;
     position: absolute;
     z-index: 1;
-    margin-top: 79vh;
+    top: 79vh;
 }
 
 .zoom-in {
@@ -26,7 +26,7 @@
     }
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
@@ -40,6 +40,6 @@
         position: absolute;
         z-index: 1;
         opacity: 1;
-        margin-top: 25vh;
+        top: 25vh;
     }
 }

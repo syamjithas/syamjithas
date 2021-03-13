@@ -59,7 +59,7 @@
 }
 
 .codeframe {
-    height: 100vh;
+    height: 100%;
     display: block;
     text-align: left;
     font-family: monospace;
@@ -73,7 +73,7 @@
 }
 
 .landing-container {
-    height: 100vh;
+    height: 100%;
     background-color: rgb(40, 44, 52);
     position: relative;
 }
@@ -81,7 +81,7 @@
 .landing-flexbox {
     display: inline-flex;
     width: 50vw;
-    height: 100vh;
+    height: 100%;
     position: relative;
     vertical-align: middle;
 }
@@ -133,7 +133,7 @@
     .landing-flexbox {
         display: block;
         width: max-content;
-        height: 50vh;
+        height: 50%;
         position: relative;
     }
     .svg-logo {
@@ -175,7 +175,7 @@
     .landing-flexbox {
         display: block;
         width: max-content;
-        height: 50vh;
+        height: 50%;
         position: relative;
     }
     .svg-logo {

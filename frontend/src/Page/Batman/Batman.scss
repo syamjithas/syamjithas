@@ -1,13 +1,14 @@
 .batman-container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-image: url("./image/backgroud.svg");
     background-repeat: repeat-y;
+    background-color: #2b1b11;
 }
 
 .final_layers {
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
 }
@@ -19,11 +20,11 @@
 .img {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     opacity: 0.1;
     transform: translateY(100vh);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 .smoke1 {
     background-image: url(./image/1.png);
@@ -86,7 +87,7 @@
     }
     .textarea {
         font-size: 20px;
-        top: 5vh;
+        top: 23vh;
         bottom: auto;
         width: auto;
         right: auto;
