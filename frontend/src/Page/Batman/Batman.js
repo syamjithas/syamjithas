@@ -1,8 +1,5 @@
 import './Batman.scss'
 import React from 'react'
-import smoke1 from './image/1.png'
-import smoke2 from './image/2.png'
-import smoke3 from './image/3.png'
 import batman from './image/batman.svg'
 
 const Batman = () => {
@@ -12,9 +9,24 @@ const Batman = () => {
                 <div className="textarea">
                     It's not who I am underneath but what I do that defines me.
             </div>
-                <img src={smoke1} className={"mid img one"} />
-                <img src={smoke2} className={"top img two"} />
-                <img src={smoke3} className={"top2 img three"} />
+                <div className={"smoke1 img one"}>
+                </div>
+                <div className={"smoke2 img two"}>
+                </div>
+                <div className={"smoke3 img three"}>
+                </div>
+                <div className={"smoke1 img three"}>
+                </div>
+                <div className={"smoke2 img two"}>
+                </div>
+                <div className={"smoke3 img one"}>
+                </div>
+                <div className={"smoke1 img two"}>
+                </div>
+                <div className={"smoke2 img one"}>
+                </div>
+                <div className={"smoke3 img three"}>
+                </div>
                 <img src={batman} className={"tippy top layer"} />
             </div>
         </div>

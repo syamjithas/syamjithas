@@ -1,6 +1,7 @@
 import './Landing.scss'
 import Codeframe from '../../Componets/Codeframe/Codeframe'
 import HelloWorld from '../../Componets/HelloWorld/HelloWorld'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 const Landing = () => {
     const [landingClass, setlandingClass] = useState({})
@@ -15,7 +16,9 @@ const Landing = () => {
             <div className='landing-flexbox text-center'>
                 <HelloWorld landingClass={landingClass} />
             </div>
-
+            <Link  className="know-more" to='/Batman'>
+                
+            </Link>
         </div>
     )
 }
