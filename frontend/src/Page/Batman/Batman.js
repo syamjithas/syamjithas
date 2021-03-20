@@ -1,11 +1,17 @@
 import './Batman.scss'
 import React from 'react'
 import batman from './image/batman.svg'
-
+import { Link } from 'react-router-dom'
 const Batman = () => {
     return (
         <div className="final_layers">
             <div className="batman-container">
+                <Link  to='/rummy'>
+                    <div className="game">
+
+                    </div>
+                </Link>
+
                 <div className="textarea">
                     It's not who I am underneath but what I do that defines me.
             </div>

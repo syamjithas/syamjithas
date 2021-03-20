@@ -112,6 +112,26 @@
     border-radius: 50%;
     box-shadow: inset 0px 0px 20px 0px black;
 }
+
+.gradient-glow {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+    border-radius: 50%;
+    animation: 2s linear infinite move_eye;
+    background-size: 200% 100%;
+}
+
+@keyframes move_eye {
+    0% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: -50% 0;
+    }
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;

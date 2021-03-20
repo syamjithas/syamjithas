@@ -16,7 +16,19 @@
     position: absolute;
     width: 100vw;
 }
-
+.game{
+    background-image: url(./image/game.svg);
+    position: absolute;
+    width: 100vw;
+    height: 9vh;
+    display: inline-block;
+    z-index: 1;
+    font-family: monospace;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
 .img {
     position: absolute;
     width: 100vw;

@@ -16,8 +16,8 @@ const Landing = () => {
             <div className='landing-flexbox text-center'>
                 <HelloWorld landingClass={landingClass} />
             </div>
-            <Link className="know-more" to='/Batman'>
-
+            <Link className="know-more" to='/batman'>
+                <div className="gradient-glow"></div>
             </Link>
         </div>
     )
