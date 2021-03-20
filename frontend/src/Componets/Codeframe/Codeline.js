@@ -1,37 +1,40 @@
-import { useState, useEffect } from 'react'
-import Codestring from './Codestring'
+import { useState, useEffect } from "react";
+import Codestring from "./Codestring";
 
-const Codeline = props => {
-    const [codeLine, setCodeLine] = useState([])
-    var codeLineP = props.value;
+const Codeline = (props) => {
+  const [codeLine, setCodeLine] = useState([]);
+  var codeLineP = props.value;
 
-    useEffect(() => {
-        lineWriter();
-    }, []);
+  useEffect(() => {
+    lineWriter();
+  }, []);
 
-    const lineWriter = () => {
-        if (codeLineP.length > 0) {
-            setCodeLine(codeLine.concat([codeLineP.shift()]))
-        } else {
-            props.nextLine();
-        }
-
+  const lineWriter = () => {
+    if (codeLineP.length > 0) {
+      setCodeLine(codeLine.concat([codeLineP.shift()]));
+    } else {
+      props.nextLine();
     }
-    const nextString = () => {
-        lineWriter();
-    }
+  };
+  const nextString = () => {
+    lineWriter();
+  };
 
-    const lineList = codeLine.length > 0 ? codeLine.map((line, index) =>
+  const lineList =
+    codeLine.length > 0 ? (
+      codeLine.map((line, index) => (
         <Codestring key={index} value={line} nextString={nextString} />
-    ) : <div></div>
-
-    return (
-        <div>
-            <span className="linenumber">{props.index}</span>
-            {lineList}
-        </div>
+      ))
+    ) : (
+      <div></div>
     );
 
-}
+  return (
+    <div>
+      <span className="linenumber">{props.index}</span>
+      {lineList}
+    </div>
+  );
+};
 
-export default Codeline
+export default Codeline;

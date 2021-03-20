@@ -1,6 +1,2 @@
-class Card {
-
-}
-class Deck{
-    
-}
+class Card {}
+class Deck {}

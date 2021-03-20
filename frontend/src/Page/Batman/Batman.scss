@@ -1,109 +1,109 @@
 .batman-container {
-    height: 100%;
-    width: 100vw;
-    background-image: url("./image/backgroud.svg");
-    background-repeat: repeat-y;
-    background-color: #2b1b11;
+  height: 100%;
+  width: 100vw;
+  background-image: url("./image/backgroud.svg");
+  background-repeat: repeat-y;
+  background-color: #2b1b11;
 }
 
 .final_layers {
-    position: absolute;
-    height: 100%;
-    width: 100vw;
-    overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 .back {
-    position: absolute;
-    width: 100vw;
+  position: absolute;
+  width: 100vw;
 }
-.game{
-    background-image: url(./image/game.svg);
-    position: absolute;
-    width: 100vw;
-    height: 9vh;
-    display: inline-block;
-    z-index: 1;
-    font-family: monospace;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+.game {
+  background-image: url(./image/game.svg);
+  position: absolute;
+  width: 100vw;
+  height: 9vh;
+  display: inline-block;
+  z-index: 1;
+  font-family: monospace;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 .img {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    opacity: 0.1;
-    transform: translateY(100vh);
-    background-size: contain;
-    background-repeat: repeat-x;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  opacity: 0.1;
+  transform: translateY(100vh);
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 .smoke1 {
-    background-image: url(./image/1.png);
+  background-image: url(./image/1.png);
 }
 .smoke2 {
-    background-image: url(./image/2.png);
+  background-image: url(./image/2.png);
 }
 .smoke3 {
-    background-image: url(./image/3.png);
+  background-image: url(./image/3.png);
 }
 
 .one {
-    animation: 15s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
+  animation: 15s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
 }
 .two {
-    animation: 15s 5s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
+  animation: 15s 5s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
 }
 .three {
-    animation: 20s 10s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
+  animation: 20s 10s infinite cubic-bezier(0.5, 0.5, 0.5, 0.5) smokeing;
 }
 
 @keyframes smokeing {
-    from {
-        transform: translateY(100vh);
-    }
-    to {
-        transform: translateY(-100vh);
-    }
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
 }
 
 .tippy {
-    position: absolute;
-    height: 70vh;
-    bottom: 0;
+  position: absolute;
+  height: 70vh;
+  bottom: 0;
 }
 
 .textarea {
-    position: absolute;
-    color: white;
-    width: 50vw;
-    padding: 30px;
-    display: inline-block;
-    text-align: center;
-    z-index: 1;
-    font-size: 45px;
-    font-family: monospace;
-    right: 9vh;
-    bottom: 25vh;
-    font-weight: bold;
-    text-shadow: 4px 6px 4px black;
+  position: absolute;
+  color: white;
+  width: 50vw;
+  padding: 30px;
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+  font-size: 45px;
+  font-family: monospace;
+  right: 9vh;
+  bottom: 25vh;
+  font-weight: bold;
+  text-shadow: 4px 6px 4px black;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-    .tippy {
-        position: absolute;
-        width: 100vw;
-        height: auto;
-        bottom: 0;
-    }
-    .textarea {
-        font-size: 20px;
-        top: 23vh;
-        bottom: auto;
-        width: auto;
-        right: auto;
-    }
+  .tippy {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+  }
+  .textarea {
+    font-size: 20px;
+    top: 23vh;
+    bottom: auto;
+    width: auto;
+    right: auto;
+  }
 }
 
 /* Desktops and laptops ----------- */
@@ -119,25 +119,25 @@
 /* iPads (landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .textarea {
-        font-size: 40px;
-        top: 0;
-        bottom: auto;
-    }
+  .textarea {
+    font-size: 40px;
+    top: 0;
+    bottom: auto;
+  }
 }
 
 /* iPads (portrait) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .tippy {
-        position: absolute;
-        width: 100vw;
-        height: auto;
-        bottom: 0;
-    }
-    .textarea {
-        font-size: 40px;
-        top: 0;
-        bottom: auto;
-    }
+  .tippy {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+  }
+  .textarea {
+    font-size: 40px;
+    top: 0;
+    bottom: auto;
+  }
 }
