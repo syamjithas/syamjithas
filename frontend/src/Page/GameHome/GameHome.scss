@@ -1,0 +1,36 @@
+.google-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  background-color: yellowgreen;
+}
+.google-signin {
+  top: 1vh;
+  right: 1vh;
+  position: absolute;
+}
+
+.host-join {
+  position: absolute;
+  display: inline-flex;
+  right: 50vw;
+  top: 1vh;
+}
+
+.user-profile {
+  height: 10vh;
+  width: 14vw;
+  top: 1vh;
+  left: 1vh;
+  position: absolute;
+  display: inline-flex;
+  background-color: red;
+}
+.user-image {
+  border-radius: 50%;
+}
+
+.user-text {
+  height: 10vh;
+  padding-top: 3vh;
+}

@@ -6,7 +6,7 @@ const Batman = () => {
   return (
     <div className="final_layers">
       <div className="batman-container">
-        <Link to="/rummy">
+        <Link to="/ssohostjoin">
           <div className="game"></div>
         </Link>
 

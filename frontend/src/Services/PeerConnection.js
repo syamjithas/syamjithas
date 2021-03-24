@@ -1,31 +1,61 @@
 import Peer from "peerjs";
-const io = require("socket.io")();
-
+import { io } from "socket.io-client";
+const ENDPOINT = "ws://localhost:5000/";
 class WebRTC {
   #connection = null;
   #peers = {};
   #socket = null;
   constructor(ROOM_ID) {
-    this.ROOM_ID = ROOM_ID || this.roomId();
+    this.ROOM_ID = ROOM_ID || this.generateRoomId();
     this.#connection = new Peer(undefined, {
       host: "/",
       port: "3001",
       path: "mypeer",
     });
-    this.#socket = io("/");
-    this.#connection.on("open", (id) => {
-      this.#socket.emit("join-room", ROOM_ID, id);
-    });
-    this.#socket.on("user-connected", (id) => {
-      this.#peers[id] = { id };
-    });
-    this.#socket.on("user-disconnected", (id) => {
-      if (this.#peers[id]) {
-        delete this.#peers[id];
-      }
+    this.#socket = io(ENDPOINT, { transports: ["websocket"] });
+
+    window.navigator.mediaDevices
+      .getUserMedia({
+        video: false,
+        audio: true,
+      })
+      .then((stream) => {
+        this.myAudio = stream;
+        this.#connection.on("call", (call) => {
+          let peer = call.peer;
+          console.log("incoming call", peer);
+          call.answer(stream);
+          call.on("stream", (peerAudio) => {
+            this.#peers[peer]["audio"] = peerAudio;
+          });
+          call.on("close", () => {
+            delete this.#peers[peer];
+          });
+          this.#peers[peer] = { peer, call };
+        });
+        this.#socket.on("user-connected", (peer) => {
+          console.log("out going call", peer);
+          const call = this.#connection.call(peer, this.myAudio);
+          call.answer(stream);
+          call.on("stream", (peerAudio) => {
+            this.#peers[peer]["audio"] = peerAudio;
+          });
+          call.on("close", () => {
+            delete this.#peers[peer];
+          });
+          this.#peers[peer] = { peer, call };
+        });
+        this.#socket.on("user-disconnected", (peer) => {
+          if (this.#peers[peer]) {
+            delete this.#peers[peer];
+          }
+        });
+      });
+    this.#connection.on("open", (peer) => {
+      this.#socket.emit("join-room", this.ROOM_ID, peer);
     });
   }
-  roomId() {
+  generateRoomId() {
     let length = 10;
     let result = "";
     let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -35,6 +65,10 @@ class WebRTC {
     }
     return result;
   }
+  muteUnmute(enable) {
+    this.myVideoStream.getAudioTracks()[0].enabled = enable;
+  }
+  callMyPeer() {}
 }
 
 export default WebRTC;
