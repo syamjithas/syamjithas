@@ -1,6 +1,6 @@
 import Peer from "peerjs";
 import { io } from "socket.io-client";
-const ENDPOINT = "ws://localhost:5000/";
+const ENDPOINT = window.location.hostname == "localhost" ? "ws://localhost:5000/" : "/";
 class WebRTC {
   #connection = null;
   #peers = {};
@@ -12,7 +12,10 @@ class WebRTC {
       port: "3001",
       path: "mypeer",
     });
-    this.#socket = io(ENDPOINT, { transports: ["websocket"] });
+    this.#socket = io(ENDPOINT, {
+      // path: "/socket",
+      transports: ["websocket"],
+    });
 
     window.navigator.mediaDevices
       .getUserMedia({
