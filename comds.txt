@@ -40,6 +40,8 @@ sudo certbot --nginx -d syamjithas.com
 
 pm2 start peerjs --port 3001 --key peerjs --path /mypeer --proxied true
 
+pm2 start node server.js
+
 npx create-react-app frontend
 cd frontend
 npm start

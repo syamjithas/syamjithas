@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.c163a104.chunk.css",
-    "main.js": "/static/js/main.d48a5ea1.chunk.js",
-    "main.js.map": "/static/js/main.d48a5ea1.chunk.js.map",
+    "main.js": "/static/js/main.0cee0d51.chunk.js",
+    "main.js.map": "/static/js/main.0cee0d51.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2dc4bb26.js",
     "runtime-main.js.map": "/static/js/runtime-main.2dc4bb26.js.map",
-    "static/js/2.32dd49ed.chunk.js": "/static/js/2.32dd49ed.chunk.js",
-    "static/js/2.32dd49ed.chunk.js.map": "/static/js/2.32dd49ed.chunk.js.map",
+    "static/js/2.fa12d331.chunk.js": "/static/js/2.fa12d331.chunk.js",
+    "static/js/2.fa12d331.chunk.js.map": "/static/js/2.fa12d331.chunk.js.map",
     "static/js/3.cecf0b61.chunk.js": "/static/js/3.cecf0b61.chunk.js",
     "static/js/3.cecf0b61.chunk.js.map": "/static/js/3.cecf0b61.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.c163a104.chunk.css.map": "/static/css/main.c163a104.chunk.css.map",
-    "static/js/2.32dd49ed.chunk.js.LICENSE.txt": "/static/js/2.32dd49ed.chunk.js.LICENSE.txt",
+    "static/js/2.fa12d331.chunk.js.LICENSE.txt": "/static/js/2.fa12d331.chunk.js.LICENSE.txt",
     "static/media/Batman.scss": "/static/media/game.2c4c3443.svg",
     "static/media/Landing.scss": "/static/media/arrow_forward_ios_white_24dp.5051f98a.svg",
     "static/media/batman.20ecde96.svg": "/static/media/batman.20ecde96.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2dc4bb26.js",
-    "static/js/2.32dd49ed.chunk.js",
+    "static/js/2.fa12d331.chunk.js",
     "static/css/main.c163a104.chunk.css",
-    "static/js/main.d48a5ea1.chunk.js"
+    "static/js/main.0cee0d51.chunk.js"
   ]
 }

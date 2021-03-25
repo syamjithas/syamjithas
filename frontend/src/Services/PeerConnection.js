@@ -1,19 +1,21 @@
 import Peer from "peerjs";
 import { io } from "socket.io-client";
-const ENDPOINT = window.location.hostname == "localhost" ? "ws://localhost:5000/" : "/";
+
 class WebRTC {
   #connection = null;
   #peers = {};
   #socket = null;
+  #ENDPOINT =
+    window.location.hostname == "localhost" ? "ws://localhost:5000/" : "/";
   constructor(ROOM_ID) {
     this.ROOM_ID = ROOM_ID || this.generateRoomId();
-    this.#connection = new Peer(undefined, {
-      host: "/",
-      port: "3001",
-      path: "mypeer",
-    });
-    this.#socket = io(ENDPOINT, {
-      // path: "/socket",
+    let config = { host: "/", path: "mypeer" };
+    config =
+      window.location.hostname == "localhost"
+        ? { ...config, port: "3001" }
+        : config;
+    this.#connection = new Peer(undefined, config);
+    this.#socket = io(this.#ENDPOINT, {
       transports: ["websocket"],
     });
 
