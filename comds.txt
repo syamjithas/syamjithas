@@ -1,5 +1,4 @@
-139.180.141.171
-5#tR2N%%9+uq_(XJ
+
 
 pwd is an abbreviation of ‘print working directory’
 
