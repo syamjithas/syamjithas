@@ -1,5 +1,6 @@
 import "./GameHome.scss";
 import React, { useState } from "react";
+import Audio from "../../Componets/Audio/Audio";
 import WebRTC from "../../Services/PeerConnection";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 const GameHome = () => {
@@ -78,10 +79,7 @@ const GameHome = () => {
         </>
       )}
       <div>
-        {/* <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio> */}
+        <Audio />
       </div>
     </div>
   );

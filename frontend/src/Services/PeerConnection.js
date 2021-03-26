@@ -71,7 +71,7 @@ class WebRTC {
     return result;
   }
   muteUnmute(enable) {
-    this.myVideoStream.getAudioTracks()[0].enabled = enable;
+    this.myAudio.getAudioTracks()[0].enabled = enable;
   }
   callMyPeer() {}
 }

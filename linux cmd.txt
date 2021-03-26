@@ -23,18 +23,19 @@ sudo certbot --nginx -d syamjithas.com -d www.syamjithas.com
 # Only valid for 90 days, test the renewal process with
 certbot renew --dry-run
 
-pm2 start peerjs --port 3001 --key peerjs --path /mypeer --proxied true
+pm2 start peerjs -p 3001 -k peerjs --path /mypeer --proxied true
 
 npx create-react-app frontend
 cd frontend
 npm start
 
 npm install --global serve
-npm install --global  peerjs
+
+
+
+
 
 serve -s build -l 3003
 
-pm2 start serve -s build -l 3003
 
-
-pm2 serve build/ 3003 --name "hello-world" --spa
+pm2 serve build/ 3003 --name "frontend" --spa
