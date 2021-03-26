@@ -17,7 +17,7 @@ const Landing = () => {
         <HelloWorld landingClass={landingClass} />
       </div>
       <Link className="know-more" to="/batman">
-        <div className="gradient-glow"></div>
+        {/* <div className="gradient-glow"></div> */}
       </Link>
     </div>
   );
