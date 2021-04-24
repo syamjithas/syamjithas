@@ -21,7 +21,7 @@ const GameHome = () => {
 
   const hostGame = () => {
     RTCCon = new WebRTC();
-    setScope({ ...scope, roomId: RTCCon.ROOM_ID });
+    setScope({ ...scope, roomId: RTCCon.ROOM_ID, RTCCon });
   };
 
   const joinGame = () => {
@@ -78,9 +78,7 @@ const GameHome = () => {
           </div>
         </>
       )}
-      <div>
-        <Audio />
-      </div>
+      <div>{scope.RTCCon && <Audio peers={scope.RTCCon.peers} />}</div>
     </div>
   );
 };

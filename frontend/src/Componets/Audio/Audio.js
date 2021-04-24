@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Audio = (props) => {
+  console.log(props.peers)
   return <div>
       <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
           Your browser does not support the

@@ -60,6 +60,9 @@ class WebRTC {
       this.#socket.emit("join-room", this.ROOM_ID, peer);
     });
   }
+  get peers() {
+    return this.#peers;
+  }
   generateRoomId() {
     let length = 10;
     let result = "";
