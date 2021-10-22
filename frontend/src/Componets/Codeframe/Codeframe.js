@@ -7,7 +7,8 @@ const Codeframe = (props) => {
   let codeBlock = helloWorld;
 
   useEffect(() => {
-    linesWriter();
+    linesWriter(); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const linesWriter = () => {
@@ -22,9 +23,9 @@ const Codeframe = (props) => {
     linesWriter();
   };
 
-  const codeLines = lines.map((line, index) => (
+  const codeLines = lines.map((line, index) =>
     <Codeline key={index} index={index} value={line} nextLine={nextLine} />
-  ));
+  );
 
   return <div className="codeframe">{codeLines}</div>;
 };

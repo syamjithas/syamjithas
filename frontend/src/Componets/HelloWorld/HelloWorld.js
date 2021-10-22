@@ -5,7 +5,7 @@ const HelloWorld = (props) => {
   return (
     <>
       <div className={`text-div ${props.landingClass.text}`}>Hello World !</div>
-      <img className={`svg-logo ${props.landingClass.logo}`} src={logo} />
+      <img alt="syamjith logo" className={`svg-logo ${props.landingClass.logo}`} src={logo} />
     </>
   );
 };

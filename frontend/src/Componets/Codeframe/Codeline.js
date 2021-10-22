@@ -7,6 +7,7 @@ const Codeline = (props) => {
 
   useEffect(() => {
     lineWriter();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const lineWriter = () => {

@@ -22,7 +22,7 @@ const Batman = () => {
         <div className={"smoke1 img two"}></div>
         <div className={"smoke2 img one"}></div>
         <div className={"smoke3 img three"}></div>
-        <img src={batman} className={"tippy top layer"} />
+        <img src={batman} alt="batman" className={"tippy top layer"} />
       </div>
     </div>
   );

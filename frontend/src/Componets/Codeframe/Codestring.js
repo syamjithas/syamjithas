@@ -5,6 +5,7 @@ const Codestring = (props) => {
   var tempStr = "";
   useEffect(() => {
     domWriter();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const delayFn = (time) => {

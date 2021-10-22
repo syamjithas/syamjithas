@@ -1,7 +1,7 @@
 import "./GameHome.scss";
 import React, { useState } from "react";
 import Audio from "../../Componets/Audio/Audio";
-import WebRTC from "../../Services/PeerConnection";
+import CreateWebRTC from "../../Services/PeerConnection";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 const GameHome = () => {
   const [userData, setuserData] = useState({});
@@ -20,7 +20,7 @@ const GameHome = () => {
   };
 
   const hostGame = () => {
-    RTCCon = new WebRTC();
+    RTCCon = CreateWebRTC();
     setScope({ ...scope, roomId: RTCCon.ROOM_ID, RTCCon });
   };
 
@@ -28,7 +28,7 @@ const GameHome = () => {
     if (!roomIdTxt) {
       return;
     }
-    RTCCon = new WebRTC(roomIdTxt);
+    RTCCon = CreateWebRTC(roomIdTxt);
     setScope({ ...scope, roomId: RTCCon.ROOM_ID });
   };
 
@@ -72,7 +72,7 @@ const GameHome = () => {
       {isLoggedIn && (
         <>
           <div className="user-profile">
-            <img className="user-image" src={userData.imageUrl} />
+            <img alt="user" className="user-image" src={userData.imageUrl} />
             <div className="user-text">{userData.name}</div>
             {scope.roomId && <div className="room-number">{scope.roomId}</div>}
           </div>
