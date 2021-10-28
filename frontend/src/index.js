@@ -1,3 +1,4 @@
+import "../node_modules/vanilla-tilt/dist/vanilla-tilt"
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";

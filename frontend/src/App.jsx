@@ -1,8 +1,9 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landing from "./Page/Landing/Landing";
 import Batman from "./Page/Batman/Batman";
 import GameHome from "./Page/GameHome/GameHome";
+import Resume from "./Page/Resume/Resume";
 function App() {
   return (
     <div className="content">
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" exact component={Landing} />
         <Route path="/batman" component={Batman} />
         <Route path="/ssohostjoin" component={GameHome} />
+        <Route path="/resume" component={Resume} />
       </Router>
     </div>
   );
