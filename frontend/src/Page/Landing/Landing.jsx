@@ -1,7 +1,7 @@
 import "./Landing.scss";
 import Codeframe from "../../Componets/Codeframe/Codeframe";
 import HelloWorld from "../../Componets/HelloWorld/HelloWorld";
-import helloWorld from "../../Data/Code";
+import { helloWorld } from "../../Data/Code";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 const Landing = () => {
@@ -12,7 +12,7 @@ const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing-flexbox">
-        <Codeframe callback={initHelloWorld} data={helloWorld}/>
+        <Codeframe callback={initHelloWorld} data={helloWorld} />
       </div>
       <div className="landing-flexbox text-center">
         <HelloWorld landingClass={landingClass} />

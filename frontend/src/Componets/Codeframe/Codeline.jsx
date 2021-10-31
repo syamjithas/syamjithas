@@ -32,7 +32,7 @@ const Codeline = (props) => {
 
   return (
     <div>
-      <span className="linenumber">{props.index}</span>
+      <div className="linenumber">{props.index}</div>
       {lineList}
     </div>
   );
