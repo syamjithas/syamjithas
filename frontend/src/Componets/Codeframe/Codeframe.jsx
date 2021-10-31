@@ -1,10 +1,9 @@
 import "./codeframe.scss";
 import { useState, useEffect } from "react";
-import helloWorld from "../../Data/Code";
 import Codeline from "./Codeline";
 const Codeframe = (props) => {
   const [lines, setLines] = useState([]);
-  let codeBlock = helloWorld;
+  let codeBlock = props.data;
 
   useEffect(() => {
     linesWriter(); 
@@ -15,7 +14,7 @@ const Codeframe = (props) => {
     if (codeBlock.length > 0) {
       setLines(lines.concat([codeBlock.shift()]));
     } else {
-      props.initHelloWorld();
+      props.callback();
     }
   };
 

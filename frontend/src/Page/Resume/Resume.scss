@@ -1,7 +1,32 @@
 .resume-container {
+  height: 100%;
   width: 100vw;
-  height: 100vh;
   display: flex;
   padding: 25px;
   background-color: rgb(40, 44, 52);
+  overflow: hidden;
+}
+
+.header-container{
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+
+.syamjith-container {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  transform-style: preserve-3d;
+  justify-content: center;
+}
+
+.syamjith-image {
+  height: 190px;
+  transform: translateZ(20px);
+  display: flex;
 }

@@ -1,14 +1,14 @@
 import "./Batman.scss";
 import React from "react";
 import batman from "./image/batman.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 const Batman = () => {
   return (
     <div className="final_layers">
       <div className="batman-container">
-        <Link to="/ssohostjoin">
+        {/* <Link to="/ssohostjoin">
           <div className="game"></div>
-        </Link>
+        </Link> */}
 
         <div className="textarea">
           It's not who I am underneath but what I do that defines me.
