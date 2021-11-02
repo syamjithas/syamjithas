@@ -7,9 +7,19 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  width: 100%;
+  width: 100vw;
   span {
     display: flex;
     padding: 5px;
+  }
+  .link {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(3, 136, 245);
+    cursor: pointer;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+  .link:hover {
+    text-decoration-thickness: 4px;
   }
 }

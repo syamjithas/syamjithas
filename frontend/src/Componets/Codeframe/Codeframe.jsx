@@ -6,7 +6,7 @@ const Codeframe = (props) => {
   let codeBlock = props.data;
 
   useEffect(() => {
-    linesWriter(); 
+    linesWriter();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -14,7 +14,7 @@ const Codeframe = (props) => {
     if (codeBlock.length > 0) {
       setLines(lines.concat([codeBlock.shift()]));
     } else {
-      props.callback();
+      if (props.callback) props.callback();
     }
   };
 
@@ -22,9 +22,9 @@ const Codeframe = (props) => {
     linesWriter();
   };
 
-  const codeLines = lines.map((line, index) =>
+  const codeLines = lines.map((line, index) => (
     <Codeline key={index} index={index} value={line} nextLine={nextLine} />
-  );
+  ));
 
   return <div className="codeframe">{codeLines}</div>;
 };

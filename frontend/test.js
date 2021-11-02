@@ -1,15 +1,3 @@
-
- const wait = (time) => {
-   return new Promise((resolve) => {
-     setTimeout(() => {
-       resolve(true);
-     }, time);
-   });
- };
- 
- const helloWorld = async () => {
-   await wait(500);
-   alert("Hello World ! ");
- };
- 
- helloWorld();
+const intro =
+  "An enthusiastic professional with 7 years of rich " +
+  "experience in creating Web-based Applications";
