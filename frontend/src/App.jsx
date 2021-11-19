@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Page/Landing/Landing";
 import Batman from "./Page/Batman/Batman";
 import GameHome from "./Page/GameHome/GameHome";
@@ -7,12 +7,14 @@ import Resume from "./Page/Resume/Resume";
 function App() {
   return (
     <div className="content">
-      <Router>
-        <Route path="/" exact component={Landing} />
-        <Route path="/batman" component={Batman} />
-        <Route path="/ssohostjoin" component={GameHome} />
-        <Route path="/resume" component={Resume} />
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Landing />} />
+          <Route path="batman/" element={<Batman />} />
+          <Route path="ssohostjoin/" element={<GameHome />} />
+          <Route path="resume/" element={<Resume />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
