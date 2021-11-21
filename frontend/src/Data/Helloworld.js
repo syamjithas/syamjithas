@@ -1,4 +1,4 @@
-export const helloWorld = [
+export const helloWorldSnippet = [
   [],
   [
     { "class": "mtk7", "text": "const" },

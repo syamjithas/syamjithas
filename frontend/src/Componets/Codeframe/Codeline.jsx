@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
 import Codestring from "./Codestring";
-
-const Codeline = (props) => {
+import { useCode } from "./CodeContext";
+const Codeline = ({ value, index }) => {
   const [codeLine, setCodeLine] = useState([]);
-  var codeLineP = props.value;
-
+  const { updateNext, lineIndex } = useCode();
   useEffect(() => {
-    lineWriter();
-     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (lineIndex == index) {
+      lineWriter();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lineIndex]);
 
   const lineWriter = () => {
-    if (codeLineP.length > 0) {
-      setCodeLine(codeLine.concat([codeLineP.shift()]));
+    if (value.length > codeLine.length) {
+      setCodeLine((codeLine) => codeLine.concat([value[codeLine.length]]));
     } else {
-      props.nextLine();
+      updateNext();
     }
   };
+
   const nextString = () => {
     lineWriter();
   };
@@ -32,7 +34,7 @@ const Codeline = (props) => {
 
   return (
     <div>
-      <div className="linenumber">{props.index}</div>
+      <div className="linenumber">{index}</div>
       {lineList}
     </div>
   );

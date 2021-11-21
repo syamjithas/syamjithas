@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-const Codestring = (props) => {
+const Codestring = ({ value,  nextString }) => {
   const [codeStr, setCodeStr] = useState("");
   var tempStr = "";
   useEffect(() => {
     domWriter();
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const delayFn = (time) => {
@@ -17,8 +17,8 @@ const Codestring = (props) => {
   };
 
   const domWriter = async () => {
-    if (props.value) {
-      let text = props.value.text.split("");
+    if (value ) {
+      let text = value.text.split("");
       while (text.length > 0) {
         let char = text.shift();
         char = char === " " ? "\u00A0" : char;
@@ -26,11 +26,12 @@ const Codestring = (props) => {
         setCodeStr(tempStr);
         await delayFn(10);
       }
+       nextString();
     }
-    props.nextString();
+
   };
-  const element = props.value ? (
-    <span className={props.value.class}>{codeStr} </span>
+  const element = value ? (
+    <span className={value.class}>{codeStr} </span>
   ) : (
     <span></span>
   );
